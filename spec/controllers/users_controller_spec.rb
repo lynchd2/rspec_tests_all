@@ -36,7 +36,7 @@ describe UsersController do
     end
 
     it "user#destroy will destroy user" do
-    expect{delete :destroy, id: user.id}.to change(User, :count).by(-1)
+      expect{delete :destroy, id: user.id}.to change(User, :count).by(-1)
     end
 
     it "does not allow unauthorized user to delete other user" do
